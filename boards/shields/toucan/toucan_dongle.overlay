@@ -41,3 +41,5 @@
 &trackpad_listener {
     status = "okay";
 };
+
+/delete-node/ &kscan0;
