@@ -105,12 +105,12 @@
 //    ├─────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
 //    │  [  │      Z      │      X      │      C      │      V      │     B      │   │     N      │      M      │      ,      │      .      │      /      │  ]  │
 //    └─────┴─────────────┴─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────┘
-//                                      │      (      │ &hrl 4 tab  │ &hrl 2 spc │   │ &hrl 3 ent │ &hrl 5 bspc │      )      │
+//                                      │      (      │ &hrl 2 spc  │ &hrl 4 tab │   │ &hrl 5 ent │ &hrl 3 bspc │      )      │
 //                                      └─────────────┴─────────────┴────────────┘   └────────────┴─────────────┴─────────────┘
-  &kp ESC     &kp Q         &kp W          &kp E          &kp R          &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
-  &kp MINUS   &hrm LGUI A   &hrm LALT S    &hrm LSHFT D   &hrm LCTRL F   &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
-  &kp LBKT    &kp Z         &kp X          &kp C          &kp V          &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
-  &kp LPAR    &hrl 4 TAB    &hrl 2 SPACE   &hrl 3 RET     &hrl 5 BSPC    &kp RPAR
+  &kp ESC     &kp Q          &kp W         &kp E          &kp R          &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
+  &kp MINUS   &hrm LGUI A    &hrm LALT S   &hrm LSHFT D   &hrm LCTRL F   &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
+  &kp LBKT    &kp Z          &kp X         &kp C          &kp V          &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
+  &kp LPAR    &hrl 2 SPACE   &hrl 4 TAB    &hrl 5 RET     &hrl 3 BSPC    &kp RPAR
             >;
         };
 
@@ -132,12 +132,12 @@
 //    ├──────┼───┼───┼──────┼─────┼─────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
 //    │ lsft │ Z │ X │  C   │  V  │  B  │   │     N      │      M      │      ,      │      .      │      /      │  ]  │
 //    └──────┴───┴───┼──────┼─────┼─────┤   ├────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────┘
-//                   │ lalt │ tab │ spc │   │ &hrl 3 ent │ &hrl 5 bspc │      )      │
+//                   │ lalt │ spc │ tab │   │ &hrl 3 ent │ &hrl 5 bspc │      )      │
 //                   └──────┴─────┴─────┘   └────────────┴─────────────┴─────────────┘
-  &kp ESC     &kp Q     &kp W       &kp E        &kp R         &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
-  &kp LCTRL   &kp A     &kp S       &kp D        &kp F         &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
-  &kp LSHFT   &kp Z     &kp X       &kp C        &kp V         &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
-  &kp LALT    &kp TAB   &kp SPACE   &hrl 3 RET   &hrl 5 BSPC   &kp RPAR
+  &kp ESC     &kp Q       &kp W     &kp E        &kp R         &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
+  &kp LCTRL   &kp A       &kp S     &kp D        &kp F         &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
+  &kp LSHFT   &kp Z       &kp X     &kp C        &kp V         &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
+  &kp LALT    &kp SPACE   &kp TAB   &hrl 3 RET   &hrl 5 BSPC   &kp RPAR
             >;
         };
 
@@ -163,19 +163,19 @@
         sym {
             display-name = "SYM";
             bindings = <
-//    ┌─────┬─────┬───┬───┬───┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//    │     │     │ # │ ! │ ` │  |  │   │     │     │     │     │     │     │
-//    ├─────┼─────┼───┼───┼───┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │  @  │ - │ + │ = │  &  │   │     │     │     │     │     │     │
-//    ├─────┼─────┼───┼───┼───┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │  ^  │ * │ % │ $ │  \  │   │     │     │  <  │  >  │     │     │
-//    └─────┴─────┴───┼───┼───┼─────┤   ├─────┼─────┼─────┼─────┴─────┴─────┘
-//                    │ ~ │ : │     │   │     │     │     │
-//                    └───┴───┴─────┘   └─────┴─────┴─────┘
+//    ┌─────┬─────┬───┬───┬─────┬───┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │     │ # │ ! │  `  │ | │   │     │     │     │     │     │     │
+//    ├─────┼─────┼───┼───┼─────┼───┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  @  │ - │ + │  =  │ & │   │     │     │     │     │     │     │
+//    ├─────┼─────┼───┼───┼─────┼───┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │  ^  │ * │ % │  $  │ \ │   │     │     │  <  │  >  │     │     │
+//    └─────┴─────┴───┼───┼─────┼───┤   ├─────┼─────┼─────┼─────┴─────┴─────┘
+//                    │ ~ │     │ : │   │     │     │     │
+//                    └───┴─────┴───┘   └─────┴─────┴─────┘
   &trans      &trans      &kp HASH    &kp EXCL    &kp GRAVE   &kp PIPE   &none   &none   &none    &none    &none   &trans
   &trans      &kp AT      &kp MINUS   &kp PLUS    &kp EQUAL   &kp AMPS   &none   &none   &none    &none    &none   &trans
   &trans      &kp CARET   &kp STAR    &kp PRCNT   &kp DLLR    &kp BSLH   &none   &none   &kp LT   &kp GT   &none   &trans
-  &kp TILDE   &kp COLON   &trans      &trans      &trans      &trans
+  &kp TILDE   &trans      &kp COLON   &trans      &trans      &trans
             >;
         };
 
