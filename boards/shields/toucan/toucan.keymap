@@ -90,6 +90,12 @@
             key-positions = <0 5 29>;
             bindings = <&tog 1>;
         };
+        combo_toggle_colemak {
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
+            key-positions = <0 5 27>;
+            bindings = <&tog 2>;
+        };
     };
 
     keymap {
@@ -105,22 +111,23 @@
 //    ├─────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
 //    │  [  │      Z      │      X      │      C      │      V      │     B      │   │     N      │      M      │      ,      │      .      │      /      │  ]  │
 //    └─────┴─────────────┴─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────┘
-//                                      │      (      │ &hrl 2 spc  │ &hrl 4 tab │   │ &hrl 5 ent │ &hrl 3 bspc │      )      │
+//                                      │      (      │ &hrl 3 spc  │ &hrl 5 tab │   │ &hrl 6 ent │ &hrl 4 bspc │      )      │
 //                                      └─────────────┴─────────────┴────────────┘   └────────────┴─────────────┴─────────────┘
   &kp ESC     &kp Q          &kp W         &kp E          &kp R          &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
   &kp MINUS   &hrm LGUI A    &hrm LALT S   &hrm LSHFT D   &hrm LCTRL F   &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
   &kp LBKT    &kp Z          &kp X         &kp C          &kp V          &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
-  &kp LPAR    &hrl 2 SPACE   &hrl 4 TAB    &hrl 5 RET     &hrl 3 BSPC    &kp RPAR
+  &kp LPAR    &hrl 3 SPACE   &hrl 5 TAB    &hrl 6 RET     &hrl 4 BSPC    &kp RPAR
             >;
         };
 
 /* #define _BASE 0 */
 /* #define _GAM  1 */
-/* #define _NUM  2 */
-/* #define _SYM  3 */
-/* #define _NAV  4 */
-/* #define _FUNC 5 */
-/* #define _MOU  6 */
+/* #define _COLE 2 */
+/* #define _NUM  3 */
+/* #define _SYM  4 */
+/* #define _NAV  5 */
+/* #define _FUNC 6 */
+/* #define _MOU  7 */
 
         game {
             display-name = "GAME";
@@ -132,12 +139,31 @@
 //    ├──────┼───┼───┼──────┼─────┼─────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
 //    │ lsft │ Z │ X │  C   │  V  │  B  │   │     N      │      M      │      ,      │      .      │      /      │  ]  │
 //    └──────┴───┴───┼──────┼─────┼─────┤   ├────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────┘
-//                   │ lalt │ spc │ tab │   │ &hrl 3 ent │ &hrl 5 bspc │      )      │
+//                   │ lalt │ spc │ tab │   │ &hrl 4 ent │ &hrl 6 bspc │      )      │
 //                   └──────┴─────┴─────┘   └────────────┴─────────────┴─────────────┘
   &kp ESC     &kp Q       &kp W     &kp E        &kp R         &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
   &kp LCTRL   &kp A       &kp S     &kp D        &kp F         &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
   &kp LSHFT   &kp Z       &kp X     &kp C        &kp V         &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
-  &kp LALT    &kp SPACE   &kp TAB   &hrl 3 RET   &hrl 5 BSPC   &kp RPAR
+  &kp LALT    &kp SPACE   &kp TAB   &hrl 4 RET   &hrl 6 BSPC   &kp RPAR
+            >;
+        };
+
+        colemake {
+            display-name = "COLE";
+            bindings = <
+//    ┌─────┬─────────────┬─────────────┬─────────────┬─────────────┬────────────┐   ┌────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────┐
+//    │ esc │      Q      │      W      │      F      │      B      │     P      │   │     J      │      L      │      U      │      Y      │      ;      │ del │
+//    ├─────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
+//    │  -  │ &hrm lgui A │ &hrm lalt R │ &hrm lsft S │ &hrm lctl T │     G      │   │     M      │ &hrm rctl N │ &hrm rsft E │ &hrm lalt I │ &hrm rgui O │  '  │
+//    ├─────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
+//    │  [  │      Z      │      X      │      C      │      D      │     V      │   │     K      │      H      │      ,      │      .      │      /      │  ]  │
+//    └─────┴─────────────┴─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────┘
+//                                      │      (      │ &hrl 3 spc  │ &hrl 5 tab │   │ &hrl 6 ent │ &hrl 4 bspc │      )      │
+//                                      └─────────────┴─────────────┴────────────┘   └────────────┴─────────────┴─────────────┘
+  &kp ESC     &kp Q          &kp W         &kp F          &kp B          &kp P      &kp J   &kp L          &kp U          &kp Y         &kp SEMI      &kp DEL
+  &kp MINUS   &hrm LGUI A    &hrm LALT R   &hrm LSHFT S   &hrm LCTRL T   &kp G      &kp M   &hrm RCTRL N   &hrm RSHFT E   &hrm LALT I   &hrm RGUI O   &kp SQT
+  &kp LBKT    &kp Z          &kp X         &kp C          &kp D          &kp V      &kp K   &kp H          &kp COMMA      &kp DOT       &kp FSLH      &kp RBKT
+  &kp LPAR    &hrl 3 SPACE   &hrl 5 TAB    &hrl 6 RET     &hrl 4 BSPC    &kp RPAR
             >;
         };
 
