@@ -98,12 +98,12 @@
 //    ├─────┼─────────────┼─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────┤
 //    │  [  │      Z      │      X      │      C      │      V      │     B      │   │     N      │      M      │      ,      │      .      │      /      │  ]  │
 //    └─────┴─────────────┴─────────────┼─────────────┼─────────────┼────────────┤   ├────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────┘
-//                                      │      (      │ &hrl 3 spc  │ &hrl 5 tab │   │ &hrl 6 ent │ &hrl 4 bspc │      )      │
+//                                      │      (      │ &hrl 1 spc  │ &hrl 3 tab │   │ &hrl 4 ent │ &hrl 2 bspc │      )      │
 //                                      └─────────────┴─────────────┴────────────┘   └────────────┴─────────────┴─────────────┘
   &kp ESC     &kp Q          &kp W         &kp E          &kp R          &kp T      &kp Y   &kp U          &kp I          &kp O         &kp P            &kp DEL
   &kp MINUS   &hrm LGUI A    &hrm LALT S   &hrm LSHFT D   &hrm LCTRL F   &kp G      &kp H   &hrm RCTRL J   &hrm RSHFT K   &hrm LALT L   &hrm RGUI SEMI   &kp SQT
   &kp LBKT    &kp Z          &kp X         &kp C          &kp V          &kp B      &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp RBKT
-  &kp LPAR    &hrl 3 SPACE   &hrl 5 TAB    &hrl 6 RET     &hrl 4 BSPC    &kp RPAR
+  &kp LPAR    &hrl 1 SPACE   &hrl 3 TAB    &hrl 4 RET     &hrl 2 BSPC    &kp RPAR
             >;
         };
 
